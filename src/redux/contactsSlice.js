@@ -21,10 +21,10 @@ const contactsSlice = createSlice({
       },
       prepare({ name, number }) {
         return {
-          payload: {
+            payload: {
+            id: shortid.generate(),
             name,
             number,
-            id: shortid.generate(),
           },
         };
       },
@@ -43,8 +43,8 @@ export const contactsReducer = contactsSlice.reducer;
 const persistConfig = {
   key: 'root',
   storage,
-  whitelist: ['contacts'] 
+  whitelist: ['contacts'],
 }
 export const persistedContactsReducer = persistReducer(
     persistConfig,
-    contactsReducer)
+    contactsReducer);
