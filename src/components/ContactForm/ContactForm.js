@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
 import css from './ContactForm.module.css';
-import { addContact } from "redux/contactsSlice";
+import { addContact } from 'redux/contactsSlice';
 import { getContacts } from 'redux/selectors';
 
 export default function ContactForm() {
@@ -22,12 +22,12 @@ export default function ContactForm() {
         return;
     }
   };
-  
-  const dispatch=useDispatch()
-  const contacts = useSelector(getContacts)
-  
+
+  const dispatch = useDispatch();
+  const contacts = useSelector(getContacts);
+
   const handleSubmit = event => {
-      event.preventDefault();
+    event.preventDefault();
     const { value } = event.currentTarget.name;
 
     if (
@@ -79,4 +79,3 @@ export default function ContactForm() {
     </form>
   );
 }
-

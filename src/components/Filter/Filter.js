@@ -1,13 +1,14 @@
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector, useDispatch } from 'react-redux';
 import css from './Filter.module.css';
-import { getFilter } from "redux/selectors";
-import { changeFilter } from "redux/filterSlice";
+import { getFilter } from 'redux/selectors';
+import { changeFilter } from 'redux/filterSlice';
 
 const Filter = () => {
   const dispatch = useDispatch();
   const filter = useSelector(getFilter);
 
-  const handleFilterChange = event => dispatch(changeFilter(event.target.value));
+  const handleFilterChange = event =>
+    dispatch(changeFilter(event.target.value));
 
   return (
     <div className={css.filter}>
@@ -23,8 +24,7 @@ const Filter = () => {
         name="user-text"
       />
     </div>
-  )
-}
+  );
+};
 
 export default Filter;
-

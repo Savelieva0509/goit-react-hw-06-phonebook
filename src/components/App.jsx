@@ -47,8 +47,8 @@ export default function App() {
   return (
     <div>
       <ContactForm />
-      <Filter/>
-      <ContactList/>
+      <Filter />
+      <ContactList />
     </div>
   );
 }

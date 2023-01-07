@@ -12,7 +12,7 @@ const ContactList = () => {
   const visibleContacts = contacts.filter(contact =>
     contact.name.toLowerCase().includes(normalizedFilter)
   );
-  
+
   return (
     <ul className={css.contactsList}>
       {visibleContacts.map(({ id, name, number }) => (
