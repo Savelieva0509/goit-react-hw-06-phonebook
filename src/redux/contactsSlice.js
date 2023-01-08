@@ -45,8 +45,8 @@ export const contactsReducer = contactsSlice.reducer;
 const persistConfig = {
   key: 'root',
   storage,
-  whitelist: ['contacts.contacts'],
 };
+
 export const persistedContactsReducer = persistReducer(
   persistConfig,
   contactsReducer
